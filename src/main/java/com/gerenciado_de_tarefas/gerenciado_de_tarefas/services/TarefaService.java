@@ -17,8 +17,8 @@ public class TarefaService {
     @Transactional
     public TarefasModel saveTarefa(TarefasDto tarefasDto) {
         TarefasModel tarefa = new TarefasModel();
-        tarefa.setNome(tarefasDto.getNome());
-        tarefa.setDescription(tarefasDto.getDescription());
+        tarefa.setNome(tarefasDto.nome());
+        tarefa.setDescription(tarefasDto.description());
         return tarefaRepository.save(tarefa);
     }
 }
